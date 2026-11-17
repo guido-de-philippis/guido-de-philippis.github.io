@@ -1,0 +1,18 @@
+/* site.css: style rules for every page, after the theme's own.
+   Loaded by layouts/partials/head.html. */
+
+/* Header: the name and the menu on one line.
+   The theme draws the name at 2rem and gives each menu entry 0.5rem
+   of space on each side; with five entries the menu then wraps.
+   - name size:         font-size of .navbar-brand
+   - space per entry:   padding of .nav-link
+   - one line:          flex-wrap: nowrap (only on screens at least
+                        576px wide; on phones the theme puts the menu
+                        under the name, and it may wrap there)
+   If an entry is added and the line is too long, reduce the name size
+   or the space, or widen the page (pageWidth in hugo.toml). */
+.navbar-brand { font-size: 1.6rem; }
+.navbar .navbar-nav .nav-link { padding-left: 0.3rem; padding-right: 0.3rem; }
+@media (min-width: 576px) {
+  .navbar .navbar-nav { flex-wrap: nowrap !important; }
+}
